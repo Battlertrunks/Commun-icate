@@ -8,8 +8,15 @@
         <li><a href="#">Message</a></li>
       </ul>
       <button (click)="loggingIn()">Log Out</button>
+      <app-nav-sidebar
+        [navbarClicked]="navbarClicked"
+        (sidebarClicked)="sideBarToggle($event)"
+      ></app-nav-sidebar>
     </ng-container>
   </div>
+  <button class="sidebar-btn" *ngIf="loggedIn" (click)="sideBarToggle(true)">
+    <i class="fa-solid fa-bars"></i>
+  </button>
   <div *ngIf="!loggedIn">
     <button (click)="loggingIn()">Sign In</button>
     <button>Sign Up</button>

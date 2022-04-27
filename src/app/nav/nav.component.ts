@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
-  loggedIn: boolean = false;
+  loggedIn: boolean = true;
+  @Output() navbarClicked = false;
 
   constructor() {}
 
@@ -14,5 +15,9 @@ export class NavComponent implements OnInit {
 
   loggingIn() {
     this.loggedIn = !this.loggedIn;
+  }
+
+  sideBarToggle(toggle: boolean) {
+    this.navbarClicked = toggle;
   }
 }

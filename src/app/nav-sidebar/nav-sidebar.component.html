@@ -1,1 +1,10 @@
-<p>nav-sidebar works!</p>
+<aside [className]="navbarClicked ? 'move-sidebar' : ''">
+  <button (click)="sidebarClicked.emit(false)">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+  <ul>
+    <li><a href="#">Friends</a></li>
+    <li><a href="#">Meet</a></li>
+    <li><a href="#">Message</a></li>
+  </ul>
+</aside>

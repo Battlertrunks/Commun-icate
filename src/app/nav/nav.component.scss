@@ -5,8 +5,16 @@ nav {
   margin: 0 1em;
 }
 
-.logo-links-container * {
-  display: inline-block;
+.sidebar-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.logo-links-container {
+  display: flex;
+  align-items: center;
 }
 
 ul {
