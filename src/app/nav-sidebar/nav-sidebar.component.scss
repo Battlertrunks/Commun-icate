@@ -3,23 +3,24 @@ aside {
   top: 0;
   right: 0;
   transform: translateX(100%);
-  transition: 1s transform ease-out;
+  transition: 0.5s transform ease-out;
   background-color: #eee;
   width: 45%;
   height: 100%;
+  z-index: 1;
 }
 
 .move-sidebar {
   transform: translateX(0);
 }
 
-button {
+.close-btn {
   position: absolute;
   right: 0.25em;
   top: 0.25em;
   background-color: transparent;
   border: none;
-  font-size: 3em;
+  font-size: 2.5em;
   color: rgb(246, 95, 95);
   margin: 0;
   cursor: pointer;
@@ -43,4 +44,13 @@ a {
 a:hover {
   transition: 0.2s background-color ease;
   background-color: #fff;
+}
+
+.logout-btn-sidebar {
+  margin: 1.5em auto;
+  padding: 0.5em 1.5em;
+  background-color: transparent;
+  border: 0.1em #333 solid;
+  border-radius: 0.15em;
+  display: block;
 }

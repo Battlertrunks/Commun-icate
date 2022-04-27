@@ -6,7 +6,7 @@ import { Component, OnInit, Output } from '@angular/core';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
-  loggedIn: boolean = true;
+  loggedIn: boolean = false;
   @Output() navbarClicked = false;
 
   constructor() {}

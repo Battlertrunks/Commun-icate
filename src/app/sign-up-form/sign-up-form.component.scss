@@ -1,0 +1,45 @@
+form {
+  margin: 5em 1.5em;
+  text-align: center;
+  background-color: #eee;
+  padding: 1.5em 0.75em;
+}
+
+h2 {
+  margin: 0.5em 0;
+}
+
+div {
+  display: inline-block;
+  margin: 0.75em auto;
+  width: 85%;
+}
+
+label {
+  text-align: left;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.letter-input-container input {
+  width: 100%;
+  height: 2em;
+  border: 0.12em #444 solid;
+  border-radius: 0.5em;
+}
+
+.checkbox-container {
+  display: flex;
+}
+
+.checkbox-container input {
+  background-color: #fff;
+  border: 0.12em #444 solid;
+}
+
+button {
+  width: 90%;
+  height: 3em;
+  background-color: #fff;
+  border: none;
+}

@@ -1,13 +1,16 @@
 <nav>
   <div class="logo-links-container">
-    <h1>Commune-icate</h1>
+    <h1 routerLink="/" routerLinkActive="active">Commune-icate</h1>
     <ng-container *ngIf="loggedIn">
-      <ul>
-        <li><a href="#">Friends</a></li>
-        <li><a href="#">Meet</a></li>
-        <li><a href="#">Message</a></li>
+      <ul class="desktop-nav-links">
+        <li><a routerLink="friends"> routerLinkActive="active"Friends</a></li>
+        <li><a routerLink="meet-users" routerLinkActive="active">Meet</a></li>
+        <li>
+          <a routerLink="message-users" routerLinkActive="active">Message</a>
+        </li>
+        <li><button>Logout</button></li>
       </ul>
-      <button (click)="loggingIn()">Log Out</button>
+      <button class="desktop-nav-links" (click)="loggingIn()">Log Out</button>
       <app-nav-sidebar
         [navbarClicked]="navbarClicked"
         (sidebarClicked)="sideBarToggle($event)"
@@ -19,6 +22,6 @@
   </button>
   <div *ngIf="!loggedIn">
     <button (click)="loggingIn()">Sign In</button>
-    <button>Sign Up</button>
+    <a routerLink="register" routerLinkActive="active">Sign Up</a>
   </div>
 </nav>

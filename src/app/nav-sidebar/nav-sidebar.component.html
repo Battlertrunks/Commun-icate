@@ -1,10 +1,11 @@
 <aside [className]="navbarClicked ? 'move-sidebar' : ''">
-  <button (click)="sidebarClicked.emit(false)">
+  <button (click)="sidebarClicked.emit(false)" class="close-btn">
     <i class="fa-solid fa-xmark"></i>
   </button>
   <ul>
-    <li><a href="#">Friends</a></li>
-    <li><a href="#">Meet</a></li>
-    <li><a href="#">Message</a></li>
+    <li><a routerLink="/friends" routerLinkActive="active">Friends</a></li>
+    <li><a routerLink="/meet" routerLinkActive="active">Meet</a></li>
+    <li><a routerLink="/message" routerLinkActive="active">Message</a></li>
+    <li><button class="logout-btn-sidebar">Logout</button></li>
   </ul>
 </aside>
