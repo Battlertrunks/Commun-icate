@@ -1,0 +1,17 @@
+<nav>
+  <div class="logo-links-container">
+    <h1>Commune-icate</h1>
+    <ng-container *ngIf="loggedIn">
+      <ul>
+        <li><a href="#">Friends</a></li>
+        <li><a href="#">Meet</a></li>
+        <li><a href="#">Message</a></li>
+      </ul>
+      <button (click)="loggingIn()">Log Out</button>
+    </ng-container>
+  </div>
+  <div *ngIf="!loggedIn">
+    <button (click)="loggingIn()">Sign In</button>
+    <button>Sign Up</button>
+  </div>
+</nav>
